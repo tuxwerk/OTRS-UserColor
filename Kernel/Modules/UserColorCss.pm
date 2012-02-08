@@ -43,7 +43,9 @@ EOT
     my %prefs = $Self->{UserObject}->GetPreferences(UserID => $_);
     my $email = $prefs{"UserEmail"};
     my $color = $prefs{"UserColor"};
-    next unless ($color =~ /#(..)(..)(..)/);
+    # match the three hex values of #1ab423
+    # black is saved as #000, this must also be accounted for
+    next unless ($color =~ /^#(..?)(..?)(..?)$/);
     my $intensity = (hex($1)+hex($2)+hex($3))/(3*255.0);
     my $foregroundcolor = ($intensity < 0.5) ? '#fff' : '#000';
     $Output .= <<"EOT";
