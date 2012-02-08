@@ -43,10 +43,13 @@ EOT
     my %prefs = $Self->{UserObject}->GetPreferences(UserID => $_);
     my $email = $prefs{"UserEmail"};
     my $color = $prefs{"UserColor"};
-    next if ($color eq '');
+    next unless ($color =~ /#(..)(..)(..)/);
+    $intensity = (hex($1)+hex($2)+hex($3))/(3*255.0);
+    $foregroundcolor = ($intensity > 0.5) ? '#fff' : '#000';
     $Output .= <<"EOT";
 [title~="($login)"], [title="$email"] {
 background-color: $color !important;
+foreground-color: $foregroundcolor !important;
 }
 EOT
   }
