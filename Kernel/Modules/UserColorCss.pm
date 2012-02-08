@@ -44,12 +44,12 @@ EOT
     my $email = $prefs{"UserEmail"};
     my $color = $prefs{"UserColor"};
     next unless ($color =~ /#(..)(..)(..)/);
-    $intensity = (hex($1)+hex($2)+hex($3))/(3*255.0);
-    $foregroundcolor = ($intensity > 0.5) ? '#fff' : '#000';
+    my $intensity = (hex($1)+hex($2)+hex($3))/(3*255.0);
+    my $foregroundcolor = ($intensity < 0.5) ? '#fff' : '#000';
     $Output .= <<"EOT";
 [title~="($login)"], [title="$email"] {
 background-color: $color !important;
-foreground-color: $foregroundcolor !important;
+color: $foregroundcolor !important;
 }
 EOT
   }
