@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>UserColor</Name>
+    <Version>1.0.0</Version>
+    <Framework>3.0.x</Framework>
+    <Vendor>tuxwerk OHG</Vendor>
+    <URL>http://tuxwerk.de/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">UserColor for Ticket Queues</Description>
+    <Description Lang="de">Benutzerfarben für Ticket Queues</Description>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/UserColor.xml"/>
+        <File Permission="644" Location="Kernel/Modules/UserColorCss.pm"/>
+        <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/colorwheel/raphael-1.5.2-min.js"/>
+        <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/colorwheel/colorwheel.js"/>
+        <File Permission="644" Location="var/httpd/htdocs/js/TX.UserColor.js"/>
+    </Filelist>
+</otrs_package>
