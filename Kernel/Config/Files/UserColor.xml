@@ -24,7 +24,7 @@
         <SubGroup>Core::Web</SubGroup>
         <Setting>
             <Array>
-                <Item>thirdparty/colorwheel/raphael-1.5.2-min.js</Item>
+                <Item>thirdparty/colorwheel/raphael.js</Item>
                 <Item>thirdparty/colorwheel/colorwheel.js</Item>
                 <Item>TX.UserColor.js</Item>
             </Array>
