@@ -18,7 +18,7 @@
       </Hash>
     </Setting>
   </ConfigItem>
-    <ConfigItem Name="Loader::Agent::CommonJS###010-UserColor" Required="1" Valid="1">
+    <ConfigItem Name="Loader::Agent::CommonJS###250-UserColor" Required="1" Valid="1">
         <Description Translatable="1">Benutzerfarben für Ticket Queues</Description>
         <Group>Framework</Group>
         <SubGroup>Core::Web</SubGroup>
