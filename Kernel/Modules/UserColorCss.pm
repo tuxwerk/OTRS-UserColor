@@ -5,6 +5,7 @@ use warnings;
 
 use Kernel::System::Valid;
 use Kernel::System::CheckItem;
+use Kernel::System::Cache;
 
 use vars qw($VERSION);
 $VERSION = qw($Revision: 1.17 $) [1];
@@ -21,6 +22,7 @@ sub new {
     }
   }
   $Self->{ValidObject} = Kernel::System::Valid->new(%Param);
+  $Self->{CacheObject} = Kernel::System::Cache->new( %Param );
 
   return $Self;
 }
@@ -29,11 +31,14 @@ sub Run {
   my ( $Self, %Param ) = @_;
 
   # get test page header
-  my $Output = <<"EOT";
+   my $Output    = $Self->{CacheObject}->Get(
+        Type => 'UserColorCss',
+        Key  => 'UserColor',
+    );
+
+if (not $Output) {
+  $Output = <<"EOT";
 Content-Type: text/css; charset=utf-8;
-Expires: Tue, 1 Jan 1980 12:00:00 GMT
-Cache-Control: no-cache
-Pragma: no-cache
 
 EOT
 
@@ -55,7 +60,14 @@ color: $foregroundcolor !important;
 }
 EOT
   }
+    $Self->{CacheObject}->Set(
+        Type  => 'UserColorCss',
+        Key   => 'UserColor',
+        Value => $Output,
+        TTL   => 60 * 60 * 24 * 2,
+    );
+
+}
   return $Output;
 }
-
 1;
