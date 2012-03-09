@@ -30,14 +30,7 @@ sub new {
 sub Run {
   my ( $Self, %Param ) = @_;
 
-  # get test page header
-   my $Output    = $Self->{CacheObject}->Get(
-        Type => 'UserColorCss',
-        Key  => 'UserColor',
-    );
-
-if (not $Output) {
-  $Output = <<"EOT";
+  my $Output = <<"EOT";
 Content-Type: text/css; charset=utf-8;
 
 EOT
@@ -45,7 +38,7 @@ EOT
   my %users = $Self->{UserObject}->UserList(Valid => 1);
   for (keys %users) {
     my $login = $users{$_};
-    my %prefs = $Self->{UserObject}->GetPreferences(UserID => $_);
+    my %prefs = $Self->{UserObject}->GetUserData(UserID => $_);
     my $email = $prefs{"UserEmail"};
     my $color = $prefs{"UserColor"};
     # match the three hex values of #1ab423
@@ -60,14 +53,6 @@ color: $foregroundcolor !important;
 }
 EOT
   }
-    $Self->{CacheObject}->Set(
-        Type  => 'UserColorCss',
-        Key   => 'UserColor',
-        Value => $Output,
-        TTL   => 60 * 60 * 24 * 2,
-    );
-
-}
   return $Output;
 }
 1;
