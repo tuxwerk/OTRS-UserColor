@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>UserColor</Name>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Framework>3.0.x</Framework>
     <Vendor>tuxwerk OHG</Vendor>
     <URL>http://tuxwerk.de/</URL>
@@ -11,6 +11,7 @@
     <Filelist>
         <File Permission="644" Location="Kernel/Config/Files/UserColor.xml"/>
         <File Permission="644" Location="Kernel/Modules/UserColorCss.pm"/>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentTicketHistory.dtl"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/colorwheel/raphael.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/colorwheel/colorwheel.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/TX.UserColor.js"/>
