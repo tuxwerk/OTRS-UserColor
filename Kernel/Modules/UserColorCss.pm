@@ -30,7 +30,7 @@ sub new {
 sub Run {
   my ( $Self, %Param ) = @_;
 
-my $Output = <<"EOT";
+  my $Output = <<"EOT";
 Content-Type: text/css; charset=utf-8;
 
 EOT
@@ -53,7 +53,6 @@ color: $foregroundcolor !important;
 }
 EOT
   }
-}
   return $Output;
 }
 1;
