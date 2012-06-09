@@ -1,7 +1,6 @@
-//
-// TX.UserColor.js
-// belongs to Module CssUserColors.pm
-//
+// --
+// TX.UserColor.js - belongs to Module CssUserColors.pm
+// 
 // prerequesites:
 //  jquery
 //  colorwheel.js ( which needs raphael and jquery )
@@ -10,7 +9,12 @@
 // - loads css with user colors
 // - augments admin user color input with colorwheel
 //
-
+// Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de
+// --
+// This software comes with ABSOLUTELY NO WARRANTY. For details, see
+// the enclosed file COPYING for license information (GPL). If you
+// did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+// --
 
 $(document).ready(function() {
   $('head').append('<link rel="stylesheet" type="text/css" href="'+ window.location.pathname +'?Action=UserColorCss" />');

@@ -7,7 +7,10 @@ work in 2.4).
 
 This package allows to set a color for agents in the preferences. The
 agent is then highlighted with the given color at all important places:
-Queue view, search, etc...
+Queue view, search, history, etc...
+
+The package overwrites the template Output/HTML/Standard/AgentTicketHistory.dtl
+with a modified version.
 
 The package is released under GPL_ Version 3 (See COPYING for more infos).
 

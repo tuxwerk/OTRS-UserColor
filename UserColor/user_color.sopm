@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>UserColor</Name>
-    <Version>1.0.5</Version>
+    <Version>1.1.0</Version>
     <Framework>3.0.x</Framework>
-    <Vendor>tuxwerk OHG</Vendor>
-    <URL>http://tuxwerk.de/</URL>
-    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
-    <Description Lang="en">UserColor for Ticket Queues</Description>
-    <Description Lang="de">Benutzerfarben für Ticket Queues</Description>
+    <Vendor>tuxwerk</Vendor>
+    <URL>https://github.com/tuxwerk/OTRS-UserColor</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3</License>
+    <Description Translatable="1">UserColor for backend views</Description>
     <Filelist>
         <File Permission="644" Location="Kernel/Config/Files/UserColor.xml"/>
         <File Permission="644" Location="Kernel/Modules/UserColorCss.pm"/>

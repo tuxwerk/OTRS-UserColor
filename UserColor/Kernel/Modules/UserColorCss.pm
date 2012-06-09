@@ -1,3 +1,12 @@
+# --
+# Kernel/Modules/UserColorCss.pm - creates the css
+# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
+
 package Kernel::Modules::UserColorCss;
 
 use strict;
