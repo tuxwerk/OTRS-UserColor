@@ -6,7 +6,7 @@
     <Vendor>tuxwerk</Vendor>
     <URL>https://github.com/tuxwerk/OTRS-UserColor</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3</License>
-    <Description Translatable="1">UserColor for backend views</Description>
+    <Description Translatable="1">Colors for agents in backend views</Description>
     <Filelist>
         <File Permission="644" Location="Kernel/Config/Files/UserColor.xml"/>
         <File Permission="644" Location="Kernel/Modules/UserColorCss.pm"/>

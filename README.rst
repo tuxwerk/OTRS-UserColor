@@ -5,8 +5,9 @@
 This is a package for the ticket system OTRS_ 3.X (Should also 
 work in 2.4). 
 
-This package allows to set a color for agents in the preferences. The
-agent is then highlighted with the given color at all important places:
+Colors for agents in backend views. This package allows to set 
+a color for agents in the preferences. The agent is highlighted 
+with the given color at all important places:
 Queue view, search, history, etc...
 
 The package overwrites the template Output/HTML/Standard/AgentTicketHistory.dtl
