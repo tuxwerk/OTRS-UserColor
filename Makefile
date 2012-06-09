@@ -1,4 +1,4 @@
 all:
-	/opt/otrs/bin/otrs.PackageManager.pl -a build -d ./ -p  UserColor.sopm -o .
+	/opt/otrs3/bin/otrs.PackageManager.pl -a build -d ./ -p *.sopm -o ..
 
 
