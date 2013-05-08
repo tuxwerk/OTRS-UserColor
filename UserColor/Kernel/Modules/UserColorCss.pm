@@ -52,7 +52,7 @@ EOT
     my $color = $prefs{"UserColor"};
     # match the three hex values of #1ab423
     # black is saved as #000, this must also be accounted for
-    next unless ($color =~ /^#(..?)(..?)(..?)$/);
+    next unless ($color && $color =~ /^#(..?)(..?)(..?)$/);
     my $intensity = (hex($1)+hex($2)+hex($3))/(3*255.0);
     my $foregroundcolor = ($intensity < 0.5) ? '#fff' : '#000';
     $Output .= <<"EOT";
