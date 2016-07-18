@@ -2,18 +2,17 @@
  OTRS Package - User Color
 =====================================
 
-This is a package for the ticket system OTRS_ 3.X (Should also 
-work in 2.4). 
+This is a package for the ticket system OTRS_ 4.0
 
 Colors for agents in backend views. This package allows to set 
 a color for agents in the preferences. The agent is highlighted 
 with the given color at all important places:
 Queue view, search, history, etc...
 
-The package overwrites the template Output/HTML/Standard/AgentTicketHistory.dtl
+The package overwrites the template Output/HTML/Standard/AgentTicketHistory.tt
 with a modified version.
 
-The package is released under GPL_ Version 3 (See COPYING for more infos).
+The package is released under AGPL_ Version 3 (See COPYING for more infos).
 
 Authors:
 

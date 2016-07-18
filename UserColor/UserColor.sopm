@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>UserColor</Name>
-    <Version>1.2.2</Version>
-    <Framework>3.3.x</Framework>
-    <Vendor>tuxwerk</Vendor>
+    <Version>4.0.1</Version>
+    <Framework>4.0.x</Framework>
+    <Vendor>tuxwerk OHG</Vendor>
     <URL>https://github.com/tuxwerk/OTRS-UserColor</URL>
-    <License>GNU GENERAL PUBLIC LICENSE Version 3</License>
-    <Description Translatable="1">Colors for agents in backend views</Description>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">Colors for agents in backend views.</Description>
+    <Description Lang="de">Benutzerfarben für Agenten im Backend.</Description>
     <Filelist>
         <File Permission="644" Location="Kernel/Config/Files/UserColor.xml"/>
-        <File Permission="644" Location="Kernel/Modules/UserColorCss.pm"/>
-        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentTicketHistory.dtl"/>
+        <File Permission="644" Location="Custom/Kernel/Modules/UserColorCss.pm"/>
+        <File Permission="644" Location="Custom/Kernel/Output/HTML/Standard/AgentTicketHistory.tt"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/colorwheel/raphael.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/thirdparty/colorwheel/colorwheel.js"/>
         <File Permission="644" Location="var/httpd/htdocs/js/TX.UserColor.js"/>
