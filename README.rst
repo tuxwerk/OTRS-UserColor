@@ -21,7 +21,7 @@ Authors:
 
 Download the opm:
 
-http://opar.perl-services.de/bin/index.cgi/package/M/MC/MCK/UserColor
+http://opar.perl-services.de/dist/UserColor
 
 Installation
 ------------
@@ -29,4 +29,4 @@ Installation
 Install the opm file in OTRS. Go to the agent preferences and set the colors.
 
 .. _OTRS: http://www.otrs.org
-.. _GPL: http://www.gnu.org/copyleft/gpl.html
+.. _AGPL: http://www.gnu.org/copyleft/agpl.html
