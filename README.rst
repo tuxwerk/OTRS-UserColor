@@ -29,4 +29,4 @@ Installation
 Install the opm file in OTRS. Go to the agent preferences and set the colors.
 
 .. _OTRS: http://www.otrs.org
-.. _AGPL: http://www.gnu.org/copyleft/agpl.html
+.. _AGPL: http://www.gnu.org/licenses/agpl.txt
