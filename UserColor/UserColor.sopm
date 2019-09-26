@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>UserColor</Name>
-    <Version>5.0.3</Version>
+    <Version>5.0.4</Version>
     <Framework>5.0.x</Framework>
     <Vendor>tuxwerk OHG</Vendor>
     <URL>https://github.com/tuxwerk/OTRS-UserColor</URL>
