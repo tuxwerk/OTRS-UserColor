@@ -12,9 +12,7 @@ package Kernel::Modules::UserColorCss;
 use strict;
 use warnings;
 
-use Kernel::System::Valid;
-use Kernel::System::CheckItem;
-use Kernel::System::Cache;
+our $ObjectManagerDisabled = 1;
 
 use vars qw($VERSION);
 $VERSION = qw($Revision: 1.17 $) [1];
@@ -25,29 +23,23 @@ sub new {
   # allocate new hash for object
   my $Self = {%Param};
   bless( $Self, $Type );
-  for my $Needed (qw(DBObject LayoutObject ConfigObject UserObject)) {
-    if ( !$Self->{$Needed} ) {
-      $Self->{LayoutObject}->FatalError( Message => "Got no $Needed!" );
-    }
-  }
-  $Self->{ValidObject} = Kernel::System::Valid->new(%Param);
-  $Self->{CacheObject} = Kernel::System::Cache->new( %Param );
 
   return $Self;
 }
 
 sub Run {
   my ( $Self, %Param ) = @_;
+  my $UserObject = $Kernel::OM->Get('Kernel::System::User');
 
   my $Output = <<"EOT";
 Content-Type: text/css; charset=utf-8;
 
 EOT
 
-  my %users = $Self->{UserObject}->UserList(Valid => 1);
+  my %users = $UserObject->UserList(Valid => 1);
   for (keys %users) {
     my $login = $users{$_};
-    my %prefs = $Self->{UserObject}->GetUserData(UserID => $_);
+    my %prefs = $UserObject->GetUserData(UserID => $_);
     my $email = $prefs{"UserEmail"};
     my $color = $prefs{"UserColor"};
     # match the three hex values of #1ab423
@@ -59,6 +51,12 @@ EOT
 [title~="($login)"], [title="$email"] {
 background-color: $color !important;
 color: $foregroundcolor !important;
+display: block !important;
+}
+.DashboardUserOnline [title="$email"] > span {
+background-color: $color !important;
+color: $foregroundcolor !important;
+width: 100% !important;
 }
 EOT
   }
